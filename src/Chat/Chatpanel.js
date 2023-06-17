@@ -93,7 +93,6 @@ const Chatpanel = () => {
     tfEle.current.value = ''
     const res = convertMessageListToConversationList(fullConversation)
     const response = await fetchConversationResp(res)
-    debugger
     if (response.status === 200){
       const conversationList = convertConversationListToMessageList(response.data)
       setConv(conversationList)
